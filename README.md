@@ -1,4 +1,4 @@
-# MatchaBack - Partner Farms Platform
+# Matcha Bridge - Partner Farms Platform
 
 A modern, interactive web platform for connecting Japanese matcha producers with international café partners. Built with vanilla HTML5, CSS3, and JavaScript.
 

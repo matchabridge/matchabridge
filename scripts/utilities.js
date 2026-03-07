@@ -1,5 +1,5 @@
 /**
- * MatchaBack Shared Utilities
+ * Matcha Bridge Shared Utilities
  * Common i18n and helper functions used across pages
  */
 

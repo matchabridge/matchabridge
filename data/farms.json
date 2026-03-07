@@ -212,9 +212,9 @@
   },
 
   {
-    "id": "fuji-matcha-works",
+    "id": "FUJI-AN",
     "status": "active",
-    "name": { "en": "Fuji Matcha Works", "ja": "富士抹茶ワークス" },
+    "name": { "en": "FUJI-AN", "ja": "富士庵" },
     "region": { "en": "Shizuoka", "ja": "静岡" },
     "producer_type": "farm",
     "producer_type_ja": "茶農家",
@@ -223,13 +223,13 @@
     "lng": 138.370,
 
     "founded_year": 1980,
-    "overview_en": "A clean and light matcha producer in Shizuoka. Currently focusing on seasonal limited releases. (New orders temporarily unavailable)",
-    "overview_ja": "静岡産のクリーンで軽やかな抹茶。季節限定商品に注力中。（現在新規受注停止）",
+    "overview_en": "The cool climate at the foot of Mt. Fuji, combined with the significant temperature variations between day and night and a pristine water system, brings out the clear, distinct flavor of the Okumidori variety. As a single-origin tea, it offers excellent traceability, making it an ideal ingredient for standardizing flagship products or highlighting the specific region on your menu.",
+    "overview_ja": "富士山の麓に広がる冷涼な気候、昼夜の大きな寒暖差、そして清らかな水系が相まって、奥緑（おくみどり）品種の澄んだはっきりとした風味を引き出しています。シングルオリジンの茶葉であるためトレーサビリティにも優れており、看板商品の品質を安定させる原料として、またメニューで特定の産地を際立たせる素材としても最適です。",
     "tags": ["shizuoka", "clean", "light", "seasonal"],
     "hero": {
       "headline_en": "Clean, light profile—ideal for seasonal menus",
       "headline_ja": "クリーンで軽やか。季節メニューに合わせやすい",
-      "cover_image": "/assets/farms/fuji-matcha-works/cover.jpg"
+      "cover_image": "/assets/farms/FUJI-AN/cover.jpg"
     },
     "videos": [],
     "cultivation": {

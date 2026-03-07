@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Cafes | Matcha Bridge</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .panel{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.04);padding:26px;margin-top:18px}
+    .tier{border:1px solid #eee;padding:18px;margin-top:14px}
+    input,textarea,select{width:100%;padding:12px;border:1px solid #ddd;font-size:13px;margin-top:8px}
+    label{font-size:12px;color:#444;display:block;margin-top:14px}
+    button{background:#1a1a1a;color:#fff;border:none;padding:12px 16px;margin-top:16px;cursor:pointer;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+    button:hover{background:#333}
+    .mini{color:#777;font-size:12px}
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">Matcha Bridge</a>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <nav>
+                <a href="#story">Stories</a>
+                <a href="#farms">Farms</a>
+                <a href="#process">Process</a>
+                <a href="#news">News</a>
+            </nav>
+            <div class="social-links">
+                <!-- TODO: Update with actual URLs when accounts are created -->
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Follow on Instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" title="Follow on TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <video class="hero-bg" autoplay muted loop playsinline data-src="matcha-hero-new.mp4"></video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Farm-Direct<br>Japanese Matcha</h1>
+        <p>Connect directly with authentic Japanese tea farms. Order premium matcha for your cafe — straight from the source.</p>
+        <a href="#farms" class="hero-cta">Explore Farms</a>
+    </div>
+</section>
+
+<section class="section">
+  <div class="section-title">For Cafes</div>
+  <div class="section-subtitle">Wholesale matcha with traceability and consistency</div>
+
+  <div class="panel">
+    <h3 style="font-family:'Crimson Text',serif;font-weight:400;margin-bottom:10px;">Wholesale basics</h3>
+    <ul style="color:#333;line-height:2;">
+      <li><b>MOQ:</b> starts from 2–5kg (varies by farm/SKU)</li>
+      <li><b>Lead time:</b> typically 10–14 days</li>
+      <li><b>Packaging:</b> nitrogen-flushed, cold-stored handling</li>
+      <li><b>Support:</b> recipe guidance and menu storytelling assets</li>
+    </ul>
+    <p class="mini">Final pricing and availability depend on lot, grade, and shipping.</p>
+  </div>
+
+  <div class="panel">
+    <h3 style="font-family:'Crimson Text',serif;font-weight:400;margin-bottom:10px;">Programs</h3>
+
+    <div class="tier">
+      <b>Starter</b>
+      <div class="mini">For new matcha menus</div>
+      <ul style="line-height:2;color:#333;">
+        <li>Sample kit (4 farms)</li>
+        <li>Latte recipe baseline</li>
+        <li>Menu copy suggestions</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <b>Growth</b>
+      <div class="mini">For increasing volume</div>
+      <ul style="line-height:2;color:#333;">
+        <li>Preferred lot recommendations</li>
+        <li>Seasonal rotation options</li>
+        <li>Consistency checklist</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <b>Partner</b>
+      <div class="mini">For signature drinks and storytelling</div>
+      <ul style="line-height:2;color:#333;">
+        <li>Producer video assets</li>
+        <li>Farm page co-marketing</li>
+        <li>Lot planning & availability alignment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel" id="samples">
+    <h3 style="font-family:'Crimson Text',serif;font-weight:400;margin-bottom:10px;">Request samples</h3>
+    <p class="mini">Share your menu and volume. We’ll recommend the best farm/lot for consistent results.</p>
+
+    <!-- Static form (email送信などは後で) -->
+    <form onsubmit="alert('Thanks! Please connect this form to email or a backend later.'); return false;">
+      <label>Cafe / Company</label>
+      <input type="text" placeholder="Cafe name" required>
+
+      <label>Contact email</label>
+      <input type="email" placeholder="you@cafe.com" required>
+
+      <label>Use case</label>
+      <select required>
+        <option value="">Select</option>
+        <option>Matcha latte</option>
+        <option>Ceremonial service</option>
+        <option>Dessert / baking</option>
+        <option>Seasonal specials</option>
+      </select>
+
+      <label>Estimated monthly volume (kg)</label>
+      <input type="number" min="0" step="0.5" placeholder="e.g., 5">
+
+      <label>Preferences</label>
+      <textarea rows="4" placeholder="Taste profile, milk type, equipment, concerns (clumping/color), etc."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="panel">
+    <h3 style="font-family:'Crimson Text',serif;font-weight:400;margin-bottom:10px;">日本語（要約）</h3>
+    <ul style="line-height:2;color:#333;">
+      <li><b>MOQ：</b>2〜5kgから（農園・SKUで変動）</li>
+      <li><b>リードタイム：</b>通常10〜14日</li>
+      <li><b>支援：</b>レシピ提案、ストーリー用素材（動画・文章）</li>
+      <li><b>サンプル：</b>用途・月間使用量に応じて最適ロットをご提案</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Matcha Bridge</h4>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+            <h4>For Cafes</h4>
+            <a href="#">Wholesale Pricing</a>
+            <a href="#">Order</a>
+            <a href="#">Barista Training</a>
+        </div>
+        <div class="footer-section">
+            <h4>Company</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Shipping Info</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Matcha Bridge Inc. All rights reserved.<br>
+        <span style="color: #666;">Connecting cafes directly with Japanese tea farms.</span>
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 console.log('farms-svg.js loaded');
 
 /**
- * MatchaBack Farms Map (SVG Japan)
+ * Matcha Bridge Farms Map (SVG Japan)
  * 
  * ピン配置ロジック（統一方式）:
  * すべてのファームは必ず prefecture_code (都道府県コード 1-47) を指定

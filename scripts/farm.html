@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farm | Matcha Bridge</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .banner{padding:12px 16px;background:#fff3cd;border:1px solid #ffeeba;margin:18px 0;font-size:13px}
+    .two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+    @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+    .panel{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.04);padding:22px}
+    .kpi{font-size:12px;color:#333;line-height:2}
+    .video-wrap{position:relative;padding-top:56.25%;background:#000;margin:14px 0}
+    .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+    .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-block;padding:10px 14px;border:1px solid #1a1a1a;text-decoration:none;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+    .btn.primary{background:#1a1a1a;color:#fff}
+    .btn.primary:hover{background:#333}
+    .btn:hover{opacity:.85}
+    .score{font-size:28px;font-family:'Crimson Text',serif}
+    .sub{color:#777;font-size:12px}
+    .pill{display:inline-block;border:1px solid #ddd;padding:3px 8px;font-size:11px;margin:6px 6px 0 0;color:#444}
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">Matcha Bridge</a>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <nav>
+                <a href="#story">Stories</a>
+                <a href="#farms">Farms</a>
+                <a href="#process">Process</a>
+                <a href="#news">News</a>
+            </nav>
+            <div class="social-links">
+                <!-- TODO: Update with actual URLs when accounts are created -->
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" title="Follow on Instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer" title="Follow on TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="section" id="farmRoot">
+  <div id="farmBanner"></div>
+
+  <div class="two-col">
+    <div>
+      <div class="section-title" id="farmName">Farm</div>
+      <div class="section-subtitle" id="farmRegion">—</div>
+
+      <p id="farmHeadline" style="max-width:820px;color:#333;"></p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="/cafes.html#samples" id="ctaSamples">Request Samples</a>
+        <a class="btn" href="/farms.html" id="ctaBack">Back to Farms</a>
+        <a class="btn" href="#" id="ctaLang">日本語</a>
+      </div>
+
+      <div style="margin-top:28px;" class="panel">
+        <div class="section-title" style="font-size:26px;margin-bottom:6px;" id="producerTitle">Producer Voice</div>
+        <div class="section-subtitle" style="margin-bottom:16px;" id="producerSub">Video verification & on-site stories</div>
+        <div id="farmVideos"></div>
+      </div>
+
+      <div style="margin-top:28px;" class="panel">
+        <div class="section-title" style="font-size:26px;margin-bottom:6px;" id="perfTitle">Cafe Performance</div>
+        <div class="section-subtitle" style="margin-bottom:16px;" id="perfSub">What matters behind the bar</div>
+        <p id="farmNotes" style="color:#333;"></p>
+        <p class="sub" style="margin-top:8px;"><b id="bestForLabel">Best for:</b> <span id="farmBestFor"></span></p>
+      </div>
+
+    </div>
+
+    <aside>
+      <div class="panel">
+        <div class="section-title" style="font-size:26px;margin-bottom:6px;" id="overviewTitle">Farm Overview</div>
+        <div class="section-subtitle" style="margin-bottom:16px;" id="overviewSub">Cultivation & processing</div>
+
+        <div class="kpi" id="farmKpis"></div>
+
+        <div style="margin-top:14px;">
+          <div id="farmTags"></div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:18px;">
+        <div class="section-title" style="font-size:26px;margin-bottom:6px;" id="traceTitle">Traceability</div>
+        <div class="section-subtitle" style="margin-bottom:16px;" id="traceSub">Lot-level documentation</div>
+        <div class="kpi" id="farmTrace"></div>
+      </div>
+
+      <div class="panel" style="margin-top:18px;">
+        <div class="section-title" style="font-size:26px;margin-bottom:6px;" id="scoreTitle">Transparency Score</div>
+        <div class="section-subtitle" style="margin-bottom:16px;" id="scoreSub">Quantified trust signals</div>
+        <div class="score" id="farmScore">—</div>
+        <div class="sub" id="farmScoreBreakdown"></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Matcha Bridge</h4>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+            <h4>For Cafes</h4>
+            <a href="#">Wholesale Pricing</a>
+            <a href="#">Order</a>
+            <a href="#">Barista Training</a>
+        </div>
+        <div class="footer-section">
+            <h4>Company</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Shipping Info</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2026 Matcha Bridge Inc. All rights reserved.<br>
+        <span style="color: #666;">Connecting cafes directly with Japanese tea farms.</span>
+    </div>
+</footer>
+
+
+<script src="scripts/farm.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
+  <meta name="robots" content="index, follow" />
+
+  <title>Our Matcha | MatchaBridge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .ourmatcha-hero {
+      padding: 40px 40px;
+      background: linear-gradient(135deg, #0f2416 0%, #1a3a1a 100%);
+      color: #fff;
+      border-radius: 0;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .ourmatcha-hero h1 {
+      font-size: 48px;
+      font-family: 'Crimson Text', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin: 0 0 16px;
+      line-height: 1.1;
+    }
+
+    .ourmatcha-hero p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.94);
+      margin: 0 0 12px;
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    .ourmatcha-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 16px;
+    }
+
+    .ourmatcha-section {
+      margin-bottom: 28px;
+    }
+
+    .ourmatcha-section h2 {
+      font-size: 28px;
+      font-family: 'Crimson Text', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    }
+
+    .ourmatcha-subhead {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .ourmatcha-section > p {
+      color: rgba(255, 255, 255, 0.95) !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .ourmatcha-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .ourmatcha-map-container {
+      border-radius: 0;
+      overflow: hidden;
+      border: 1px solid #eee;
+      background: #faf9f6;
+      position: relative;
+      width: 100%;
+    }
+
+    /* Desktop: 220px height */
+    @media (min-width: 769px) {
+      .ourmatcha-map-container {
+        min-height: 220px;
+      }
+    }
+
+    /* Mobile: 240px height */
+    @media (max-width: 768px) {
+      .ourmatcha-map-container {
+        min-height: 240px;
+      }
+    }
+
+    .ourmatcha-map-container img {
+      width: 100%;
+      display: block;
+      background: #f5f3f0;
+    }
+
+    .ourmatcha-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(245, 245, 245, 0.6));
+      padding: 14px;
+      border-radius: 0;
+      margin-bottom: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .ourmatcha-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: #1a1a1a;
+      text-shadow: none;
+    }
+
+    .ourmatcha-card p {
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+      line-height: 1.7;
+      text-shadow: none;
+    }
+
+    .ourmatcha-summary {
+      background: linear-gradient(135deg, rgba(232, 245, 233, 0.6), rgba(220, 240, 222, 0.6));
+      padding: 14px;
+      border-radius: 0;
+      border-left: 3px solid #2d5016;
+      font-size: 13px;
+      color: #333;
+      line-height: 1.8;
+      text-shadow: none;
+    }
+
+    .ourmatcha-why-grid {
+      display: flex;
+      flex-direction: column;
+      margin-top: 12px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(245, 245, 245, 0.6));
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 0 !important;
+      overflow: hidden;
+    }
+
+    .ourmatcha-why-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 14px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+
+    .ourmatcha-why-item + .ourmatcha-why-item {
+      border-top: none;
+    }
+
+    .ourmatcha-why-dot {
+      flex: 0 0 8px;
+      width: 8px;
+      height: 8px;
+      margin-top: 6px;
+      border-radius: 50%;
+      background: #2d5016;
+    }
+
+    .ourmatcha-why-text {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .ourmatcha-profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 420px));
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .ourmatcha-profile-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(245, 245, 245, 0.6));
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 0;
+      padding: 12px;
+    }
+
+    .ourmatcha-profile-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: #1a1a1a;
+    }
+
+    .ourmatcha-profile-card p {
+      margin: 0;
+      color: #222;
+    }
+
+    body {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(250, 249, 246, 0.2)), url('assets/tea-leaf.jpeg') fixed center / cover;
+      background-attachment: fixed;
+    }
+
+    .section {
+      background: transparent !important;
+    }
+
+    .ourmatcha-footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 40px;
+      background: rgba(0, 0, 0, 0.85);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .ourmatcha-footer strong {
+      display: block;
+      color: #fff;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .ourmatcha-hero {
+        padding: 40px 24px;
+      }
+
+      .ourmatcha-hero h1 {
+        font-size: 36px;
+      }
+
+      .ourmatcha-why-grid {
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="ourmatcha-hero">
+    <div class="ourmatcha-eyebrow">Our Matcha</div>
+    <h1>Shizuoka × Kagoshima</h1>
+    <p>A Japan-sourced blend designed for lattes, with strong color, a rounded body, and a clean finish.</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="section">
+
+    <!-- Where it comes from -->
+    <div class="ourmatcha-section">
+      <div class="ourmatcha-subhead">Where it comes from</div>
+      <h2>Two regions. One cup.</h2>
+
+      <div class="ourmatcha-two-col">
+        <div class="ourmatcha-map-container" style="position: relative;">
+          <img src="assets/japan-map.svg" alt="Map of Japan showing Shizuoka and Kagoshima" style="width: 100%; display: block;">
+          
+          <!-- Pin markers (positioned as percentage of container) -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+            <!-- Shizuoka pin at 53% from left, 72% from top -->
+            <div style="position: absolute; left: 53%; top: 72%; transform: translate(-50%, -50%); width: 20px; height: 20px;">
+              <div style="width: 100%; height: 100%; border-radius: 50%; background: #2d5016; box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.2), 0 2px 8px rgba(0, 0, 0, 0.15); opacity: 0.95;"></div>
+              <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #2d5016; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap; pointer-events: auto;">Shizuoka</div>
+            </div>
+            
+            <!-- Kagoshima pin at 15.4% from left, 87.9% from top -->
+            <div style="position: absolute; left: 15.4%; top: 87.9%; transform: translate(-50%, -50%); width: 20px; height: 20px;">
+              <div style="width: 100%; height: 100%; border-radius: 50%; background: #2d5016; box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.2), 0 2px 8px rgba(0, 0, 0, 0.15); opacity: 0.95;"></div>
+              <div style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); background: #2d5016; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap; pointer-events: auto;">Kagoshima</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="ourmatcha-card">
+            <h3>Shizuoka</h3>
+            <p>
+              Clean mountain air and well-drained slopes produce a smooth, balanced character.
+              In this blend, Shizuoka brings a cleaner finish and keeps the overall cup from
+              feeling too heavy.
+            </p>
+          </div>
+          <div class="ourmatcha-card">
+            <h3>Kagoshima</h3>
+            <p>
+              Known for giving the blend color, depth, and presence. In this blend,
+              Kagoshima helps create a thicker body and vibrant appearance, especially
+              important in milk-based drinks.
+            </p>
+          </div>
+          <div class="ourmatcha-summary">
+            Together, they create a matcha that feels bold enough for lattes, but still
+            clean and composed.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why this blend -->
+    <div class="ourmatcha-section">
+      <div class="ourmatcha-subhead">Why this blend</div>
+      <h2>Built to hold up in milk</h2>
+      <p style="font-size: 13px; color: #666; margin-bottom: 16px;">
+        Most matcha lattes lose color or structure in milk. This blend was designed to hold up.
+      </p>
+
+      <div class="ourmatcha-why-grid">
+        <div class="ourmatcha-why-item">
+          <span class="ourmatcha-why-dot"></span>
+          <span class="ourmatcha-why-text">A slightly stronger roast brings out a gentle toasty warmth.</span>
+        </div>
+        <div class="ourmatcha-why-item">
+          <span class="ourmatcha-why-dot"></span>
+          <span class="ourmatcha-why-text">The color stays visible and stable in milk-based drinks.</span>
+        </div>
+        <div class="ourmatcha-why-item">
+          <span class="ourmatcha-why-dot"></span>
+          <span class="ourmatcha-why-text">It is built for consistency, so the cup stays stable across batches.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flavor Profile -->
+    <div class="ourmatcha-section">
+      <div class="ourmatcha-subhead">Flavor profile</div>
+      <h2>What you can taste and see</h2>
+
+      <div class="ourmatcha-profile-grid">
+        <div class="ourmatcha-profile-card">
+          <h3>Color</h3>
+          <p>Vibrant green</p>
+        </div>
+        <div class="ourmatcha-profile-card">
+          <h3>Aroma</h3>
+          <p>Lightly toasty</p>
+        </div>
+        <div class="ourmatcha-profile-card">
+          <h3>Body</h3>
+          <p>Rounded and full</p>
+        </div>
+        <div class="ourmatcha-profile-card">
+          <h3>Finish</h3>
+          <p>Clean and balanced</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="ourmatcha-footer">
+    <strong>Sourced and supplied in partnership with MatchaBridge</strong>
+    Connecting specialty cafés in the U.S. with tea producers in Japan.
+  </div>
+
+</body>
+</html>

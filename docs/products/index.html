@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UTF-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
+  <meta name="robots" content="index, follow" />
+
+  <title>Products | MatchaBridge</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elsie&family=Crimson+Text:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../styles.css?v=20260408-products">
+
+  <style>
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin: 48px 0;
+    }
+
+    .product-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(250, 249, 246, 0.9));
+      border-radius: 0;
+      padding: 32px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card h3 {
+      font-family: 'Crimson Text', serif;
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      color: #1a3a1a;
+    }
+
+    .product-card .product-region {
+      font-size: 12px;
+      color: #666;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .product-card .product-link {
+      display: inline-flex;
+      align-items: center;
+      font-size: 13px;
+      color: #2d5016;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-top: auto;
+    }
+
+    .product-card .product-link:after {
+      content: ' →';
+      margin-left: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin: 32px 0;
+      }
+
+      .product-card {
+        padding: 24px;
+      }
+
+      .product-card h3 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Our Products</h1>
+      <p>
+        Explore our curated matcha blends, each designed for café excellence and traceable sourcing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="section" id="products">
+    <div class="section-title">Matcha Blends</div>
+    <div class="section-subtitle">Each blend tells a story of origin, craftsmanship, and quality</div>
+
+    <div class="products-grid">
+      <a href="shizuoka-kagoshima-blend1/" class="product-card">
+        <h3>Shizuoka × Kagoshima Blend</h3>
+        <div class="product-region">Blend</div>
+        <p>
+          A harmonious blend combining the earthiness of Kagoshima with the sweetness of Shizuoka's premium tencha. Built to hold up in milk while maintaining clarity and balance.
+        </p>
+        <div class="product-link">Learn More</div>
+      </a>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="../scripts/components.js?v=20260408-products"></script>
+
+</body>
+</html>

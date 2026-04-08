@@ -1,6 +1,6 @@
 # GitHubへの公開手順
 
-このドキュメントは、Matcha BridgeプロジェクトをGitHubに公開するための完全ガイドです。
+このドキュメントは、MatchaBridgeプロジェクトをGitHubに公開するための完全ガイドです。
 
 ## 📋 準備
 
@@ -73,7 +73,7 @@ git config --list | grep user
 git add .
 
 # コミットメッセージを追加
-git commit -m "Initial commit: Matcha Bridge Partner Farms Platform
+git commit -m "Initial commit: MatchaBridge Partner Farms Platform
 
 - Interactive Japan map with farm locations
 - Multi-language support (English/Japanese)

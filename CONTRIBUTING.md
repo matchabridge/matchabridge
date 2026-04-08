@@ -1,6 +1,6 @@
-# Contributing to Matcha Bridge
+# Contributing to MatchaBridge
 
-Thank you for interest in contributing to the Matcha Bridge Partner Farms Platform! This guide explains how to set up your development environment and contribute to the project.
+Thank you for interest in contributing to the MatchaBridge Partner Farms Platform! This guide explains how to set up your development environment and contribute to the project.
 
 ## 🚀 Getting Started
 
@@ -304,4 +304,4 @@ git push origin feature/your-feature
 
 ---
 
-**Thank you for contributing to Matcha Bridge!** 🍵
+**Thank you for contributing to MatchaBridge!** 🍵

@@ -1,5 +1,5 @@
 /**
- * Matcha Bridge Farms Map
+ * MatchaBridge Farms Map
  * Interactive map showing partner farms with details panel
  */
 

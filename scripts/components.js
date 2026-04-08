@@ -1,5 +1,5 @@
 /* =============================================================
-   Matcha Bridge — shared header / footer injection
+   MatchaBridge — shared header / footer injection
    Usage: add <div id="site-header"></div> and
               <div id="site-footer"></div> to each inner page,
           then load this script before </body>.
@@ -10,8 +10,8 @@
   var HEADER = `
   <header>
     <div class="header-container">
-      <a href="index.html" class="logo" aria-label="Matcha Bridge home">
-        <img src="assets/logo.png" alt="Matcha Bridge" loading="eager" decoding="async">
+      <a href="index.html" class="logo" aria-label="MatchaBridge home">
+        <img src="assets/logo.png" alt="MatchaBridge" loading="eager" decoding="async">
       </a>
       <div style="display:flex; align-items:center; gap:24px;">
         <div class="social-links">
@@ -30,7 +30,7 @@
   <footer>
     <div class="footer-container">
       <div class="footer-section">
-        <h4>Matcha Bridge</h4>
+        <h4>MatchaBridge</h4>
         <a href="index.html#founder-message">About Us</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -48,7 +48,7 @@
       </div>
     </div>
     <div class="footer-bottom" id="footer-bottom-text">
-      &copy; 2026 Matcha Bridge Inc. All rights reserved.<br>
+      &copy; 2026 MatchaBridge Inc. All rights reserved.<br>
       <span style="color: #666;">Connecting cafes directly with Japanese tea farms.</span>
     </div>
   </footer>`;

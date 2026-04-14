@@ -223,12 +223,35 @@
     }
 
     body {
+      position: relative;
+      min-height: 100vh;
       background-color: #0b1a12;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
       background-image: url('../../assets/shizuoka-single-origin1.jpeg');
       background-repeat: no-repeat;
       background-position: center top;
       background-size: cover;
-      background-attachment: fixed;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(250, 249, 246, 0.2));
+      pointer-events: none;
+    }
+
+    body > * {
+      position: relative;
+      z-index: 1;
     }
 
     .section {
@@ -254,10 +277,9 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        background-attachment: scroll;
-        background-position: center 72px;
-        background-size: contain;
+      body::before {
+        background-position: center 96px;
+        background-size: 100% auto;
       }
 
       .ourmatcha-hero {

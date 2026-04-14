@@ -223,8 +223,12 @@
     }
 
     body {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(250, 249, 246, 0.2)), url('../../assets/shizuoka-single-origin1.jpeg') fixed center / cover;
-      background-attachment: fixed;
+      background-color: #0b1a12;
+      background-image: url('../../assets/shizuoka-single-origin1.jpeg');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 100% auto;
+      background-attachment: scroll;
     }
 
     .section {
@@ -252,7 +256,8 @@
     @media (max-width: 768px) {
       body {
         background-attachment: scroll;
-        background-size: contain;
+        background-position: center top;
+        background-size: 100% auto;
       }
 
       .ourmatcha-hero {

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" />
+  <meta name="robots" content="index, follow" />
+
+  <title>Shizuoka Single Origin | MatchaBridge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../../styles.css">
+
+  <style>
+    .ourmatcha-hero {
+      padding: 40px 40px;
+      background: linear-gradient(135deg, #0f2416 0%, #1a3a1a 100%);
+      color: #fff;
+      border-radius: 0;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .ourmatcha-hero h1 {
+      font-size: 48px;
+      font-family: 'Crimson Text', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin: 0 0 16px;
+      line-height: 1.1;
+    }
+
+    .ourmatcha-hero p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.94);
+      margin: 0 0 12px;
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    .ourmatcha-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 16px;
+    }
+
+    .ourmatcha-section {
+      margin-bottom: 28px;
+    }
+
+    .ourmatcha-section h2 {
+      font-size: 28px;
+      font-family: 'Crimson Text', serif;
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      color: #fff;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65), 0 1px 3px rgba(0, 0, 0, 0.4);
+      white-space: nowrap;
+    }
+
+    .ourmatcha-subhead {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.95);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65), 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .ourmatcha-section > p {
+      color: rgba(255, 255, 255, 0.98) !important;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65), 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .ourmatcha-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .ourmatcha-map-container {
+      border-radius: 0;
+      overflow: hidden;
+      border: 1px solid #eee;
+      background: #faf9f6;
+      position: relative;
+      width: 100%;
+    }
+
+    /* Desktop: 220px height */
+    @media (min-width: 769px) {
+      .ourmatcha-map-container {
+        min-height: 220px;
+      }
+    }
+
+    /* Mobile: 240px height */
+    @media (max-width: 768px) {
+      .ourmatcha-map-container {
+        min-height: 240px;
+      }
+    }
+
+    .ourmatcha-map-container img {
+      width: 100%;
+      display: block;
+      background: #f5f3f0;
+    }
+
+    .ourmatcha-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(245, 245, 245, 0.6));
+      padding: 14px;
+      border-radius: 0;
+      margin-bottom: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .ourmatcha-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: #1a1a1a;
+      text-shadow: none;
+    }
+
+    .ourmatcha-card p {
+      font-size: 13px;
+      color: #666;
+      margin: 0;
+      line-height: 1.7;
+      text-shadow: none;
+    }
+
+    .ourmatcha-summary {
+      background: linear-gradient(135deg, rgba(232, 245, 233, 0.6), rgba(220, 240, 222, 0.6));
+      padding: 14px;
+      border-radius: 0;
+      border-left: 3px solid #2d5016;
+      font-size: 13px;
+      color: #333;
+      line-height: 1.8;
+      text-shadow: none;
+    }
+
+    .ourmatcha-why-grid {
+      display: flex;
+      flex-direction: column;
+      margin-top: 12px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(245, 245, 245, 0.6));
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 0 !important;
+      overflow: hidden;
+    }
+
+    .ourmatcha-why-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 14px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+
+    .ourmatcha-why-item + .ourmatcha-why-item {
+      border-top: none;
+    }
+
+    .ourmatcha-why-dot {
+      flex: 0 0 8px;
+      width: 8px;
+      height: 8px;
+      margin-top: 6px;
+      border-radius: 50%;
+      background: #2d5016;
+    }
+
+    .ourmatcha-why-text {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .ourmatcha-profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 420px));
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .ourmatcha-profile-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), rgba(245, 245, 245, 0.6));
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 0;
+      padding: 12px;
+    }
+
+    .ourmatcha-profile-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      color: #1a1a1a;
+    }
+
+    .ourmatcha-profile-card p {
+      margin: 0;
+      color: #222;
+    }
+
+    body {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(250, 249, 246, 0.2)), url('../../assets/tea-leaf.jpeg') fixed center / cover;
+      background-attachment: fixed;
+    }
+
+    .section {
+      background: transparent !important;
+    }
+
+    .ourmatcha-footer {
+      text-align: center;
+      padding: 40px 20px 20px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 40px;
+      background: rgba(0, 0, 0, 0.85);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+    }
+
+    .ourmatcha-footer strong {
+      display: block;
+      color: #fff;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+        background-size: contain;
+      }
+
+      .ourmatcha-hero {
+        padding: 40px 24px;
+      }
+
+      .ourmatcha-hero h1 {
+        font-size: 36px;
+      }
+
+      .ourmatcha-section h2 {
+        font-size: 24px;
+      }
+
+      .section {
+        padding: 24px;
+      }
+
+      .ourmatcha-section {
+        margin-bottom: 20px;
+      }
+
+      .ourmatcha-two-col {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .ourmatcha-map-container {
+        min-height: 200px !important;
+      }
+
+      .ourmatcha-card {
+        padding: 10px;
+        margin-bottom: 6px;
+      }
+
+      .ourmatcha-profile-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .ourmatcha-why-grid {
+        border-radius: 0;
+        margin-top: 10px;
+      }
+
+      .ourmatcha-why-item {
+        padding: 10px 12px;
+      }
+
+      .ourmatcha-footer {
+        padding: 24px 16px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="ourmatcha-hero">
+    <div class="ourmatcha-eyebrow">Our Matcha</div>
+    <h1>Shizuoka Single Origin</h1>
+    <p>A single-origin ceremonial grade from the foothills of Mt. Fuji - with natural clarity, layered sweetness, and a clean finish.</p>
+  </section>
+
+  <!-- Main Content -->
+  <div class="section">
+
+    <!-- Where it comes from -->
+    <div class="ourmatcha-section">
+      <div class="ourmatcha-subhead">Where it comes from</div>
+      <h2>Fuji, Shizuoka. One Origin.</h2>
+
+      <div class="ourmatcha-two-col">
+        <div class="ourmatcha-map-container" style="position: relative;">
+          <img src="../../assets/japan-map.svg" alt="Map of Japan showing Shizuoka" style="width: 100%; display: block;">
+          
+          <!-- Pin markers (positioned as percentage of container) -->
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+            <!-- Shizuoka pin at 53% from left, 72% from top -->
+            <div style="position: absolute; left: 53%; top: 72%; transform: translate(-50%, -50%); width: 20px; height: 20px;">
+              <div style="width: 100%; height: 100%; border-radius: 50%; background: #2d5016; box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.2), 0 2px 8px rgba(0, 0, 0, 0.15); opacity: 0.95;"></div>
+              <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); background: #2d5016; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; white-space: nowrap; pointer-events: auto;">Shizuoka</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="ourmatcha-card">
+            <h3>One Region, One Harvest</h3>
+            <p>
+              At the foothills of Mt. Fuji, cool temperatures, significant day-night swings,
+              and exceptionally pure mountain water create the conditions for something distinct.
+              The river mist and softly diffused light slow the growth of the leaves,
+              concentrating their umami and sweetness into a profile that is refined,
+              balanced, and traceable to a single place.
+            </p>
+          </div>
+          <div class="ourmatcha-summary">
+            Every cup comes from one harvest, one region - and that clarity shows in the flavor.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why this matcha -->
+    <div class="ourmatcha-section">
+      <div class="ourmatcha-subhead">Why this matcha</div>
+      <h2>Character from one place</h2>
+      <p style="font-size: 13px; color: #666; margin-bottom: 16px;">
+        Single-origin matcha is chosen for character - one place, one harvest, one story in every cup.
+      </p>
+
+      <div class="ourmatcha-why-grid">
+        <div class="ourmatcha-why-item">
+          <span class="ourmatcha-why-dot"></span>
+          <span class="ourmatcha-why-text">Grown in river mist and soft diffused light, this Yabukita-based matcha develops a balanced profile of umami, gentle bitterness, and natural aroma.</span>
+        </div>
+        <div class="ourmatcha-why-item">
+          <span class="ourmatcha-why-dot"></span>
+          <span class="ourmatcha-why-text">With shading cultivation, it delivers a clean, refined finish that holds up well in both hot and iced preparations.</span>
+        </div>
+        <div class="ourmatcha-why-item">
+          <span class="ourmatcha-why-dot"></span>
+          <span class="ourmatcha-why-text">First-harvest leaves bring natural sweetness and layered depth, while the powder keeps a vibrant, transparent green even after roasting.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flavor Profile -->
+    <div class="ourmatcha-section">
+      <div class="ourmatcha-subhead">Flavor profile</div>
+      <h2>Flavor Profile</h2>
+
+      <div class="ourmatcha-profile-grid">
+        <div class="ourmatcha-profile-card">
+          <h3>Color</h3>
+          <p>Vibrant, transparent green</p>
+        </div>
+        <div class="ourmatcha-profile-card">
+          <h3>Aroma</h3>
+          <p>Fresh and aromatic</p>
+        </div>
+        <div class="ourmatcha-profile-card">
+          <h3>Body</h3>
+          <p>Smooth with gentle umami</p>
+        </div>
+        <div class="ourmatcha-profile-card">
+          <h3>Finish</h3>
+          <p>Clean and refined, with clear definition</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="ourmatcha-footer">
+    <strong>Sourced and supplied in partnership with MatchaBridge</strong>
+    Connecting specialty cafes in the U.S. with tea producers in Japan.
+  </div>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
  * 2) This script runs on all docs pages.
  */
 (function () {
-  var GA4_ID = 'G-XXXXXXXXXX';
+  var GA4_ID = 'G-BQQHGH32JT';
 
   // Keep the script dormant until a real Measurement ID is configured.
   if (!/^G-[A-Z0-9]+$/.test(GA4_ID) || GA4_ID === 'G-XXXXXXXXXX') {

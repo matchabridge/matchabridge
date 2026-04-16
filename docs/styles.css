@@ -1417,14 +1417,17 @@ footer {
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
   margin: 60px 0;
 }
 
 .contact-option {
+  flex: 0 1 360px;
+  max-width: 360px;
+  width: 100%;
   background: #f3f3f3;
   border-radius: 24px;
   padding: 28px 22px;
@@ -1522,9 +1525,14 @@ footer {
   }
 
   .contact-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
     gap: 16px;
     margin: 40px 0;
+  }
+
+  .contact-option {
+    max-width: 100%;
   }
 
   .contact-option {

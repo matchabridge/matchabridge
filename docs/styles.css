@@ -36,11 +36,11 @@ header {
   z-index: 1000;
   background: white;
   border-bottom: 1px solid #eee;
-  padding: 0 8px;
+  padding: 0 32px;
 }
 
 .header-container {
-  max-width: 1040px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -70,7 +70,7 @@ header {
 nav a {
   color: #1a1a1a;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
   margin-left: 40px;
   transition: color 0.3s;
@@ -92,12 +92,12 @@ nav a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   color: #1a1a1a;
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .social-links svg {
@@ -977,7 +977,7 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   header {
-    padding: 0 4px;
+    padding: 0 16px;
   }
 
   section[id] {
@@ -990,6 +990,12 @@ footer {
 
   nav a {
     display: none;
+  }
+
+  .social-links a {
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
   }
 
   .hero {
